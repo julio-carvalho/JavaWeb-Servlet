@@ -1,9 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<% 
-	String nomeEmpresa = (String)request.getAttribute("empresa");
-	System.out.println("Nome empresa: " + nomeEmpresa);
-%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +8,6 @@
 <title>Adicionando nova empresa - Curso Java Web</title>
 </head>
 <body>
-	Empresa <%=nomeEmpresa%> cadastrada com sucesso!
+	Empresa ${empresa} cadastrada com sucesso! PARABÉNS
 </body>
 </html>

@@ -18,7 +18,7 @@ public class NovaEmpresaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Cadastrando nova empresa");
+		
 		
 		// Método Get
 		String nomeEmpresa = request.getParameter("nome");
@@ -33,6 +33,8 @@ public class NovaEmpresaServlet extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("/novaEmpresaCriada.jsp");
 		request.setAttribute("empresa", empresa.getNome());
 		rd.forward(request, response);
+		
+		System.out.println("Cadastrando nova empresa: " + empresa.getNome());
 	}
 
 }
